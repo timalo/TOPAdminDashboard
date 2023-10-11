@@ -1,25 +1,65 @@
-.container{
-    display: grid;
-    grid-template-rows: 1fr 2fr 15fr;
-    grid-template-columns: 1fr 5fr;
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.container{
+    display: grid;
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: 1fr 5fr;
+    height: 100vh;
+}
 
 .sidebar {
     background-color: blue;
 }
 
+.searchBar {
+    overflow: hidden;
+    background-color: white;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 9fr 1fr 1fr 3fr;
+    grid-column: 2;
+    grid-row: 1 / 2;
+}
+
+.searchBar > *{
+    height: 50%;
+    overflow: auto;
+}
+
+.searchBar input {
+    background-color: lightgray;
+    margin-left: 0.5%;
+    width: 70%;
+    border-style: none;
+    border-radius: 30px;
+    height: 50%;
+    grid-column: 2;
+}
+
+.notificationIcon {
+    justify-self: center;
+}
+
+body {
+    margin: 0;
+}
+
 .sidebar {
-    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 8fr;
     color: white;
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 17;
     grid-column: 1;
 }
 
 .sidebar .logo {
-    font-size: 26px;
-    text-transform: uppercase;
+    margin-left: 15%;
+    font-size: 36px;
+    font-weight: 700;
 }
 
 .links {
@@ -27,29 +67,100 @@
 }
 
 .links li {
-    font-size: 1.4rem;
-    margin: 8px;
+    font-size: 1.8rem;
+    margin: 12px;
 }
 
-.searchBar {
-    width: 100%;
-    height: 100%;
-    background-color: red;
-    grid-column: 2;
-    grid-row: 1;
-    
+.profilePicture {
+    background-color: pink;
+    border-radius: 50%;
+    height: 85%;
+    justify-self: center;
+}
+
+.searchBar p {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    justify-self: start;
+    margin-top: 3%;
+}
+
+.buttons > * {
+    background-color: #5050ff;
+    border-style: none;
+    height: 30%;
+    width: 90%;
+    align-self: center;
+    color: white;
+    font-size: 22px;
+    border-radius: 50px;
 }
 
 .welcomeBar {
-    background-color: pink;
-    width: 100%;
+    display: grid;
+    overflow: hidden;
+    align-items: center;
+    grid-template-columns: 1fr 3fr 3fr;
+    background-color: white;
+    grid-row: 2 / 4;
+    grid-column: 2;
+    box-shadow: 0 8px 8px -2px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.welcomeText{
+    margin-left: 1%;
+}
+
+.welcomeBar > * {
+    overflow: auto;
+}
+
+.userGreeting {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.buttons {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
     height: 100%;
+    margin-right: 15%;
+}
+
+.welcomeBar img {
+    background-color: pink;
+    border-radius: 50%;
+    padding: 1%;
+    height: 70%;
+    justify-self: end;
+}
+
+.searchIcon {
+    justify-self: end;
+    margin-right: 5%;
 }
 
 .content {
-    background-color: green;
-    width: 100%;
-    height: 100%;
-    grid-row-start: 3;
-    grid-row-end: 5;
+    display: grid;
+    grid-template: repeat(13, 1fr) / 1fr;
+    background-color: #e1e1ff;
+    grid-column: 2;
+    grid-row: 4 / -1;
+}
+
+.titles {
+    margin-left: 2%;
+    display: grid;
+    grid-row: 1 / 2;
+    grid-template: 1fr / 3fr 1fr;
+    gap: 2%;
+}
+
+.titles > * {
+    font-size: 24px;
+    font-weight: 600;
 }
