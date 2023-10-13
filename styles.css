@@ -109,6 +109,10 @@ body {
     z-index: 1;
 }
 
+.btn1:hover, .btn2:hover, .btn3:hover {
+    transform: scale(1.2);
+}
+
 .welcomeText{
     margin-left: 1%;
 }
@@ -129,6 +133,7 @@ body {
     gap: 5%;
     height: 100%;
     margin-right: 15%;
+    padding-left: 5%;
 }
 
 .welcomeBar img {
@@ -204,8 +209,6 @@ body {
 
 hr {
     width: 95%;
-    border: 0;
-    height: 1px;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -269,6 +272,10 @@ hr {
     align-self: center;
     height: 100%;
     max-height: 40px;
+}
+
+.cardButton:hover {
+    transform: scale(1.2);
 }
 
 .trending {
